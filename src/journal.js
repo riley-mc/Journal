@@ -3,10 +3,12 @@ Journal.prototype.countWords = function(){
   return count;
 }
 
-console.log(countWords("This is a test"));
+Journal.prototype.countVowels = function(){
+  let vowels = this.entry.match(/[aeiou]/g)
+  return vowels ===null ? 0 : vowels.length;
+};
 
-
-function Journal(entry, name) {
+export function Journal(entry, name) {
   this.entry = entry;
   this.name = name;
 }
