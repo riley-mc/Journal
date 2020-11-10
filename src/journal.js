@@ -1,3 +1,5 @@
+
+
 Journal.prototype.countWords = function(){
   let count = this.entry.split(' ').length;
   return count;
